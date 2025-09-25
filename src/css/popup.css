@@ -1,13 +1,10 @@
-.sidebar nav li:last-of-type,
-.sidebar header h1,
-.mobile nav li:last-of-type,
-.mobile header h1 {
-    display: none !important;
+#empty {
+    min-width: 500px;
 }
 
-.sidebar nav,
-.mobile nav {
-    padding-top: 0 !important;
+.sidebar #empty,
+.mobile #empty {
+    min-width: unset !important;
 }
 
 #popup.mobile {
@@ -32,6 +29,7 @@
     border-top: solid 1px var(--popup-header-border);
     border-bottom: none;
     overflow: hidden;
+    padding-top: 0 !important;
 }
 
 .mobile > header,
@@ -47,6 +45,16 @@
     flex: 1;
     text-align: center;
     border-left: solid 1px var(--popup-header-border);
+}
+
+.mobile nav li:last-of-type,
+.mobile header h1 {
+    display: none !important;
+}
+
+.sidebar nav li:last-of-type,
+.sidebar header h1 {
+    display: none !important;
 }
 
 .mobile .menu li:first-of-type {
@@ -95,11 +103,26 @@
     display: none;
 }
 
+.sidebar nav {
+    padding-top: 0 !important;
+}
+
 html {
     height: 100%;
 }
 
-@media (max-width: 300px) {
+#empty h1,
+#empty h3 {
+    text-align: center;
+}
+
+#empty img {
+    width: 75%;
+    margin: 1em auto;
+    display: block;
+}
+
+@media (width <= 300px) {
     .sidebar #items li {
         position: relative;
     }
